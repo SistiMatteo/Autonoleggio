@@ -1,2 +1,2 @@
-# Autonoleggio2
+# Autonoleggio
 Progetto che descrive un Autonoleggio
