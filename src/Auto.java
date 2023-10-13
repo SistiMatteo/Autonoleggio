@@ -82,6 +82,61 @@ public int getPosti() {
 // Metodo setter per impostare il codice della macchina
 public void setPosti(int posti) {
     this.posti = posti;
+}
+
+
+
+//to string
+@Override
+public String toString() {
+    return "Auto [codice=" + codice + ", targa=" + targa + ", marca=" + marca + ", modello=" + modello + ", posti="
+            + posti + "]";
+}
+
+
+
+//equals
+@Override
+public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + codice;
+    result = prime * result + ((targa == null) ? 0 : targa.hashCode());
+    result = prime * result + ((marca == null) ? 0 : marca.hashCode());
+    result = prime * result + ((modello == null) ? 0 : modello.hashCode());
+    result = prime * result + posti;
+    return result;
+}
+
+@Override
+public boolean equals(Object obj) {
+    if (this == obj)
+        return true;
+    if (obj == null)
+        return false;
+    if (getClass() != obj.getClass())
+        return false;
+    Auto other = (Auto) obj;
+    if (codice != other.codice)
+        return false;
+    if (targa == null) {
+        if (other.targa != null)
+            return false;
+    } else if (!targa.equals(other.targa))
+        return false;
+    if (marca == null) {
+        if (other.marca != null)
+            return false;
+    } else if (!marca.equals(other.marca))
+        return false;
+    if (modello == null) {
+        if (other.modello != null)
+            return false;
+    } else if (!modello.equals(other.modello))
+        return false;
+    if (posti != other.posti)
+        return false;
+    return true;
 } 
     
     
