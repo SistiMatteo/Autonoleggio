@@ -8,7 +8,8 @@ public class App {
         System.out.println(persona1);
         Persona persona2 = new Persona(persona1);
         System.out.println(persona2.toString());
-        system.out.println()
+        System.out.println(auto1);
+        System.out.println(patente1);
 
         
     }
